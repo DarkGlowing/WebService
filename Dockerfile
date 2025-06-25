@@ -21,7 +21,7 @@ RUN git clone https://github.com/DarkGlowing/ssh.git && \
 
 RUN git clone https://github.com/DarkGlowing/dante-server.git && \
     cd dante-server && \
-    cp dante-server.conf /etc/dante-server.conf
+    cp dante-server.conf /etc/dante-server.conf && \
     systemctl start danted
     
 
