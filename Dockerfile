@@ -22,7 +22,7 @@ RUN cd && \
     git clone https://github.com/DarkGlowing/dante-server.git && \
     cd dante-server && \
     cp danted.conf /etc/danted.conf && \
-    systemctl start danted
+    chmod 644 /etc/danted.conf
     
 
 # Expose the correct port
@@ -30,3 +30,4 @@ EXPOSE $PORT
 
 # Start code-server (listen on all interfaces)
 CMD ["code-server", "--bind-addr", "0.0.0.0:8080", "--auth", "none"]
+CMD ["/usr/sbin/danted", "-f", "/etc/danted.conf"]
