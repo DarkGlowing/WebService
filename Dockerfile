@@ -30,4 +30,3 @@ EXPOSE $PORT
 
 # Start code-server (listen on all interfaces)
 CMD ["code-server", "--bind-addr", "0.0.0.0:8080", "--auth", "none"]
-CMD ["/usr/sbin/danted", "-f", "/etc/danted.conf"]
