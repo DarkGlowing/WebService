@@ -8,8 +8,8 @@ ENV PORT=8080
 RUN apt-get update && \
     apt-get install -y autossh git nano curl wget gnupg software-properties-common && \
     curl -fsSL https://code-server.dev/install.sh | sh && \
-    apt-get purge -y systemd
-    apt-get install -y systemctl 
+    apt-get purge -y systemd \
+    apt-get install -y systemctl \
     apt-get clean && rm -rf /var/lib/apt/lists/* 
 
 # Expose the correct port
