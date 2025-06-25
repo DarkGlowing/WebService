@@ -16,8 +16,7 @@ RUN apt-get update && \
 
 RUN git clone https://github.com/DarkGlowing/ssh.git && \
     cd ssh && \
-    chmod 600 vpn.pem && \
-    autossh -i vpn.pem -M 0 -N -R 37793:10.217.112.156:8888 DarkMagic_.first@DarkMagic-37793.portmap.io
+    chmod 600 vpn.pem
 
 RUN git clone https://github.com/DarkGlowing/dante-server.git && \
     cd dante-server && \
