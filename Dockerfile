@@ -18,9 +18,10 @@ RUN git clone https://github.com/DarkGlowing/ssh.git && \
     cd ssh && \
     chmod 600 vpn.pem
 
-RUN git clone https://github.com/DarkGlowing/dante-server.git && \
+RUN cd && \
+    git clone https://github.com/DarkGlowing/dante-server.git && \
     cd dante-server && \
-    cp dante-server.conf /etc/dante-server.conf && \
+    cp danted.conf /etc/danted.conf && \
     systemctl start danted
     
 
